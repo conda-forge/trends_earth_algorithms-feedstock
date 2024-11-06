@@ -1,5 +1,5 @@
 {% set name = "trends_earth_algorithms" %}
-{% set version = "2.1.14" %}
+{% set version = "2.1.16" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/ConservationInternational/trends.earth-algorithms/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 76b9d79d3355578706fe9353695e261e59638f275685d64bd7a98e3f96a2f471
+  sha256: 597fcc84cc48eeb092db664dcc86ed0447b5f93714bd09617657f9b43d584542
 
 build:
   number: 0
@@ -27,7 +27,7 @@ requirements:
     - marshmallow-dataclass ==8.5.10
     - defusedxml >=0.7.1
     - trends_earth_schemas
-    
+
 test:
   imports:
     - te_algorithms
@@ -35,7 +35,7 @@ test:
 
 about:
   home: https://github.com/ConservationInternational/trends.earth-algorithms
-  license:  MIT
+  license: MIT
   license_file: LICENSE
   summary: trends.earth-algorithms is a python package to facilitate analyzing remotely-sensed datasets in support of monitoring land degradation.
 
