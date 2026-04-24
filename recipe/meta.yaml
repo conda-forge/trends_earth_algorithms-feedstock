@@ -10,17 +10,17 @@ source:
   sha256: 76b9d79d3355578706fe9353695e261e59638f275685d64bd7a98e3f96a2f471
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
   noarch: python
 
 requirements:
   host:
-    - python >=3.7
+    - python {{ python_min }}
     - pip
 
   run:
-    - python >=3.7
+    - python >={{ python_min }}
     - openpyxl >=3.0.10
     - backoff >=2.1.0
     - marshmallow >=3.18.0
@@ -29,6 +29,8 @@ requirements:
     - trends_earth_schemas
     
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - te_algorithms
 
